@@ -16,6 +16,7 @@ import { DataSourceListComponent } from './data-source-list/data-source-list.com
   ],
   imports: [
     CommonModule
-  ]
+  ],
+  exports:[DataServiceFormComponent]
 })
 export class DataManagementModule { }

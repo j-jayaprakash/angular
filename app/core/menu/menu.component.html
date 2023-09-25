@@ -1,1 +1,13 @@
-<p>menu works!</p>
+<mat-toolbar color="primary">
+    <span class="title">My App</span>
+    <button mat-button class="m-2" [matMenuTriggerFor]="menu" >Data Management</button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item *ngFor="let d of dm">{{d}}</button>
+    </mat-menu>
+    
+  </mat-toolbar>
+  
+<app-data-service-form></app-data-service-form>
+
+    <app-grid></app-grid>
+
