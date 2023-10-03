@@ -1,0 +1,22 @@
+<form class="form" [formGroup]="data">
+    <h1>Data Source Form</h1>
+
+    <input class="form-control mt-2" formControlName="dbType" name="dbType" placeholder="Enter DB Type" />
+
+    <input class="form-control mt-2" formControlName="dbName" name="dbName" placeholder="Enter DB Name" />
+
+    <input class="form-control mt-2" formControlName="dbUrl" name="dbUrl" placeholder="Enter DB Url" />
+
+    <input class="form-control mt-2" formControlName="dbPort" name="dbPort" placeholder="Enter DB Port" />
+
+    <input class="form-control mt-2" formControlName="userName" name="userName" placeholder="Enter UserName" />
+
+    <input class="form-control mt-2" formControlName="password" name="password" placeholder="Enter Password" />
+</form>
+
+<div mat-dialog-actions>
+    <button class="btn btn-danger" mat-button mat-dialog-close>cancel</button>
+    <button (click)="saveUser()" class="btn btn-primary" mat-button mat-dialog-close cdkFocusInitial>
+        save
+    </button>
+</div>
