@@ -1,4 +1,4 @@
-import { AfterContentChecked, Component } from '@angular/core';
+import { AfterContentChecked, AfterViewChecked, Component } from '@angular/core';
 import { ColDef } from 'ag-grid-community';
 
 import { DataServiceService } from '../../data-service.service';
@@ -23,12 +23,10 @@ export class MenuComponent implements AfterContentChecked {
     
   }
   ngAfterContentChecked(): void {
-    console.log(this.dbs.userData);
-
     this.rowData=this.dbs.userData;
     this.rowData=[...this.rowData];
-
   }
+  
   ngOnInit(): void {
     this.dataBaseDetails=this.dbs.dbDetails;
     this.dm=Object.keys(this.dataBaseDetails['dataManagement'][0])

@@ -1,5 +1,5 @@
 <mat-toolbar color="primary">
-    <span class="title">My App</span>
+  <a  class="text-white title" style="text-decoration: none;" href="/">My App </a>
     <button mat-button class="m-2" [matMenuTriggerFor]="menu" >Data Management</button>
     <mat-menu #menu="matMenu">
         <button [routerLink]="'/dataManagement/'+d" mat-menu-item *ngFor="let d of dm">{{d}}</button>
